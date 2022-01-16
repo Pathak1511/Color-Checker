@@ -1,0 +1,22 @@
+{
+  "name": "color_checker",
+  "version": "1.0.0",
+  "description": "Color Contrast Checker Web for Web Designer",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "start:prod": "set NODE_ENV=production nodemon index.js"
+  },
+  "author": "Hritik Pathak",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "morgan": "^1.10.0",
+    "pug": "^3.0.2",
+    "slugify": "^1.6.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

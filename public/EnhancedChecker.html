@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 62.5%;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+          'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: 400;
+        line-height: 1;
+        color: #181919;
+        max-width: 150rem;
+        margin: 1.4rem auto;
+      }
+
+      .section-hero {
+        background-color: #f5e3d2;
+        padding: 4.8rem 2.4rem;
+        position: relative;
+      }
+      .arrow2,
+      .arrow {
+        position: absolute;
+        font-size: 3.6rem;
+        /* box-shadow: inset 0 0 0 1px #222; */
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        padding: 1.2rem;
+        border-radius: 70%;
+        background-color: #f6f6f6;
+        z-index: 1000;
+      }
+      .arrow {
+        right: 2.6rem;
+      }
+      .hero {
+        max-width: 130rem;
+        margin: 0 auto;
+        padding: 0 3.2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 9.6rem;
+        align-items: center;
+        padding: 3.2rem;
+      }
+      .heading-tertiary,
+      .heading-secondary,
+      .hero-primary {
+        line-height: 1.05;
+        color: #333;
+        letter-spacing: -0.6px;
+      }
+      .hero-primary {
+        font-size: 5.2rem;
+        font-weight: 700;
+
+        margin-bottom: 5.2rem;
+      }
+
+      .hero-description {
+        font-size: 2rem;
+        margin-bottom: 4.8rem;
+        line-height: 1.05;
+      }
+
+      .btn:link,
+      .btn:visited {
+        display: inline-block;
+        padding: 1.6rem 3.2rem;
+        font-size: 2rem;
+        font-weight: 500;
+        text-decoration: none;
+        border-radius: 1.5rem;
+        transition: all 0.6s;
+      }
+
+      .btn--full:link,
+      .btn--full:visited {
+        background-color: #e67e22;
+        color: #fff;
+      }
+
+      .btn--full:hover,
+      .btn--full:active {
+        background-color: #cf711f;
+      }
+
+      .btn--outline:link,
+      .btn--outline:visited {
+        background-color: #fff;
+        color: #555;
+        box-shadow: inset 0 0 0 2px #fff;
+      }
+
+      .btn--outline:hover,
+      .btn--outline:active {
+        background-color: #f5e3d2;
+      }
+
+      .hero-img {
+        width: 100%;
+      }
+
+      .btn--margin {
+        margin-right: 3.2rem !important;
+      }
+
+      .delivered-customer {
+        display: flex;
+        margin-top: 8rem;
+        align-items: center;
+        gap: 1.6rem;
+      }
+
+      .delivered-imgs {
+        display: flex;
+      }
+      .delivered-imgs img {
+        width: 4.8rem;
+        height: 4.8rem;
+        border-radius: 50%;
+        margin-right: -1.6rem;
+        border: 3px solid #f5e3d2;
+      }
+
+      .delivered-imgs img:last-child {
+        margin: 0;
+      }
+
+      .delivered-text {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: #444;
+      }
+
+      .delivered-text span {
+        color: #cf711f;
+        font-weight: 700;
+      }
+
+      #btn3 {
+        display: flex;
+        position: absolute;
+        z-index: 1000;
+        bottom: 1.8rem;
+        right: 9.6rem;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+
+      .container-1 {
+        display: grid;
+        place-items: center;
+        position: absolute;
+        overflow: hidden;
+        right: 9.6rem;
+        bottom: 4.4rem;
+        width: 200px;
+        height: 250px;
+        z-index: 100000;
+        background: #e3e3e3;
+        border-radius: 1.5rem;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.16);
+      }
+
+      .hidden1 {
+        display: none;
+      }
+
+      label {
+        font-size: 1.8rem;
+      }
+
+      .sliders {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 0.8rem;
+      }
+
+      .sliders input {
+        position: relative;
+        width: 100%;
+        height: 2px;
+        background: #e6e6e6;
+        border-radius: 20px;
+      }
+      .show-modal1 {
+        display: inline-block;
+        padding: 1rem 1.4rem;
+        border-radius: 1.5rem;
+        font-size: 1.8rem;
+        background-color: #424242;
+        color: #f8f8f8;
+      }
+      .output-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 150px;
+        gap: 0.8rem;
+      }
+
+      .output {
+        font-size: 1.4rem;
+      }
+
+      .copyBtn {
+        font-size: 1.4rem;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="section-hero" id="Absolute">
+      <div class="arrow">
+        <i class="fas fa-arrow-right"></i>
+      </div>
+      <div class="arrow2">
+        <i class="fas fa-arrow-left"></i>
+      </div>
+      <div class="hero">
+        <div class="hero-text-box">
+          <h1 class="hero-primary">
+            A healthy meal delivered to your door, every single day
+          </h1>
+          <p class="hero-description">
+            The smart 365-days-per-year food subscription that will make you eat
+            healthy again. Tailored to your personal tastes and nutritional
+            needs.
+          </p>
+          <a href="#" class="btn btn--full btn--margin">Start eating well</a>
+          <a href="#" class="btn btn--outline"> Learn more &rarr;</a>
+          <div class="delivered-customer">
+            <div class="delivered-imgs">
+              <img src="./img/customers/customer-1.jpg" />
+              <img src="./img/customers/customer-2.jpg" />
+              <img src="./img/customers/customer-3.jpg" />
+              <img src="./img/customers/customer-4.jpg" />
+              <img src="./img/customers/customer-5.jpg" />
+              <img src="./img/customers/customer-6.jpg" />
+            </div>
+            <p class="delivered-text">
+              <span>250,000+</span>meals delivered last year!
+            </p>
+          </div>
+        </div>
+        <div class="hero-img-box">
+          <img
+            src="./img/hero.png"
+            class="hero-img"
+            alt="Woman enjoying food, meal in a container and food bowls in the table "
+          />
+        </div>
+      </div>
+      <div class="side-color">
+        <button class="show-modal1" id="btn3" onclick="openbtn1()">
+          <i class="fas fa-neuter"></i>
+        </button>
+        <div class="container-1 hidden1">
+          <div class="sliders">
+            <label>Red</label>
+            <input
+              type="range"
+              min="0"
+              max="255"
+              value="0"
+              oninput="getvalue()"
+              id="red"
+            />
+            <label>Green</label>
+            <input
+              type="range"
+              min="0"
+              max="255"
+              value="0"
+              oninput="getvalue()"
+              id="green"
+            />
+            <label>Blue</label>
+            <input
+              type="range"
+              min="0"
+              max="255"
+              value="0"
+              oninput="getvalue()"
+              id="blue"
+            />
+            <label>Alpha</label>
+            <input
+              type="range"
+              min="0.1"
+              max="1.0"
+              step="0.1"
+              value="1"
+              oninput="getvalue()"
+              id="alpha"
+            />
+            <div class="output-box">
+              <div class="output">rgba(0,0,0,1)</div>
+              <div class="copyBtn" onclick="copy()">
+                <i class="fas fa-copy"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script type="text/javascript">
+      'use strict';
+
+      let openbtn = document.querySelector('.container-1');
+      const btn3 = document.querySelector('.show-modal1');
+
+      function openbtn1() {
+        openbtn.classList.remove('hidden1');
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && !openbtn.classList.contains('hidden1')) {
+            closeModal();
+          }
+        });
+      }
+
+      let outputBox = document.querySelector('.output');
+      let getBody = document.querySelector('.section-hero');
+
+      function getvalue() {
+        let red = document.getElementById('red').value;
+        let green = document.getElementById('green').value;
+        let blue = document.getElementById('blue').value;
+        let alpha = document.getElementById('alpha').value;
+        getBody.style.background = `rgba(${red},${green},${blue},${alpha})`;
+        outputBox.innerHTML = `rgba(${red},${green},${blue},${alpha})`;
+      }
+
+      function copy() {
+        let element = document.createElement('textarea');
+        element.value = outputBox.textContent;
+        document.body.appendChild(element);
+        element.select();
+        document.execCommand('copy');
+        document.body.removeChild(element);
+        // alert('copied');
+      }
+    </script>
+    <!-- <script src="./JS/enhanced.js"></script> -->
+    <script src="./JS/all.js"></script>
+  </body>
+</html>

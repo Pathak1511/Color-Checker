@@ -1,0 +1,81 @@
+extends base 
+
+block content 
+  section#Absolute.section-hero
+    .arrow
+      i.fas.fa-arrow-right
+    .arrow2
+      i.fas.fa-arrow-left
+    .hero
+      .hero-text-box
+        h1.hero-primary
+          | A healthy meal delivered to your door, every single day
+        p.hero-description
+          | The smart 365-days-per-year food subscription that will make you eat
+          | healthy again. Tailored to your personal tastes and nutritional
+          | needs.
+        a.btn.btn--full.btn--margin(href='#') Start eating well
+        a.btn.btn--outline(href='#')  Learn more &rarr;
+        .delivered-customer
+          .delivered-imgs
+            img(src='./img/customers/customer-1.jpg')
+            img(src='./img/customers/customer-2.jpg')
+            img(src='./img/customers/customer-3.jpg')
+            img(src='./img/customers/customer-4.jpg')
+            img(src='./img/customers/customer-5.jpg')
+            img(src='./img/customers/customer-6.jpg')
+          p.delivered-text
+            span 250,000+
+            | meals delivered last year!
+      .hero-img-box
+        img.hero-img(src='./img/hero.png' alt='Woman enjoying food, meal in a container and food bowls in the table ')
+    .side-color
+      button#btn3.show-modal1(onclick='openbtn1()')
+        i.fas.fa-neuter
+      .container-1.hidden1
+        .sliders
+          label Red
+          input#red(type='range' min='0' max='255' value='0' oninput='getvalue()')
+          label Green
+          input#green(type='range' min='0' max='255' value='0' oninput='getvalue()')
+          label Blue
+          input#blue(type='range' min='0' max='255' value='0' oninput='getvalue()')
+          label Alpha
+          input#alpha(type='range' min='0.1' max='1.0' step='0.1' value='1' oninput='getvalue()')
+          .output-box
+            .output rgba(0,0,0,1)
+            .copyBtn(onclick='copy()')
+              i.fas.fa-copy
+
+  script(type='text/javascript').
+    'use strict';
+    let openbtn = document.querySelector('.container-1');
+    const btn3 = document.querySelector('.show-modal1');
+    function openbtn1() {
+    openbtn.classList.remove('hidden1');
+    document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !openbtn.classList.contains('hidden1')) {
+    closeModal();
+    }
+    });
+    }
+    let outputBox = document.querySelector('.output');
+    let getBody = document.querySelector('.section-hero');
+    function getvalue() {
+    let red = document.getElementById('red').value;
+    let green = document.getElementById('green').value;
+    let blue = document.getElementById('blue').value;
+    let alpha = document.getElementById('alpha').value;
+    getBody.style.background = `rgba(${red},${green},${blue},${alpha})`;
+    outputBox.innerHTML = `rgba(${red},${green},${blue},${alpha})`;
+    }
+    function copy() {
+    let element = document.createElement('textarea');
+    element.value = outputBox.textContent;
+    document.body.appendChild(element);
+    element.select();
+    document.execCommand('copy');
+    document.body.removeChild(element);
+    // alert('copied');
+    }
+
