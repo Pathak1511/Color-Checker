@@ -93,14 +93,27 @@ function changeColor(e) {
   var imageData = ctx1.getImageData(x, y, 1, 1).data;
   var rgbaColor =
     'rgba(' + imageData[0] + ',' + imageData[1] + ',' + imageData[2] + ',1)';
-  // var hex = rgba2hex('rgbaColor');
 
+  let temp = [];
+  let temp2 = [];
+  let l1 = 1,
+    l2 = 1;
+  // Contrast = (L1 + 0.05) / (L2 + 0.05)
+  // L = 0.2126 ́ R+0.7152 ́G+0.0722 ́B.
   if (btn1 === 1) {
     document.querySelector('.checker-left').style.backgroundColor = rgbaColor;
+    temp[0] = imageData[0] * 1;
+    temp[1] = imageData[1] * 1;
+    temp[2] = imageData[2] * 1;
+    l1 = 0.2126 * temp[0] + 0.7152 * temp[1] + 0.0722 * temp[2];
   } else {
     document.querySelector('.left-heading').style.color = rgbaColor;
     document.querySelector('.left-para').style.color = rgbaColor;
     document.querySelector('.left-author').style.color = rgbaColor;
+    temp2[0] = imageData[0] * 1;
+    temp2[1] = imageData[1] * 1;
+    temp2[2] = imageData[2] * 1;
+    l2 = 0.2126 * temp2[0] + 0.7152 * temp2[1] + 0.0722 * temp2[2];
   }
 }
 

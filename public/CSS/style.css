@@ -29,8 +29,8 @@ body {
   font-weight: 400;
   line-height: 1;
   color: #181919;
-  max-width: 150rem;
-  margin: 2rem 1.8rem;
+  width: 100%;
+  height: auto;
 }
 
 :root {
@@ -46,6 +46,12 @@ body {
 
 /******************************  HEADER *********************************/
 
+.topAttention {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+}
 .header {
   display: flex;
   flex-direction: row;
@@ -55,9 +61,8 @@ body {
   height: 6.8rem;
   padding: 0rem 6.4rem;
   z-index: 5;
+  background-color: #222;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  background-color: #444;
-  border-radius: 1.6rem 1.6rem 0rem 0rem;
 }
 
 /************ Toggle menu******************/
@@ -71,14 +76,44 @@ body {
 /******************************/
 
 .primary-heading {
-  font-size: 4.4rem;
+  font-size: 4rem;
   font-weight: 600;
   text-transform: uppercase;
   line-height: 1.05;
-  background-color: rgb(255, 255, 255);
+  /* background-color: rgb(255, 255, 255); */
   border-radius: 2rem;
 }
 
+/***********************Off canvas Body  *********************/
+
+.offCanvasbody {
+  display: flex;
+  gap: 8rem;
+  align-items: center;
+  padding: 0 6.4rem 0 6.4rem;
+}
+.offcanvas {
+  background-color: #e9e9e9;
+}
+.offcanvas2 {
+  width: 40%;
+}
+.offcanvas1 {
+  height: 60%;
+}
+
+.aboutusImg {
+  border-radius: 2.8rem;
+  box-shadow: rgba(19, 1, 1, 0.16) 0px 1px 4px;
+  filter: contrast(140%), blur(5%), brightness(120%);
+}
+
+.aboutusImg:hover {
+  cursor: pointer;
+  filter: contrast(160%), blur(10%), brightness(150%);
+  transition: all 0.6s ease-in-out;
+}
+/********************************************/
 .nav-main {
   display: flex;
   flex-direction: row;
@@ -91,7 +126,7 @@ body {
 .nav-list:visited {
   text-decoration: none;
   display: inline-block;
-  font-size: 2.4rem;
+  font-size: 2rem;
   line-height: 1.05;
   font-weight: 500;
   color: #f7f7f7;
@@ -119,9 +154,11 @@ body {
 
 .nav-list.first:link,
 .nav-list.first:visited {
-  font-size: 5.2rem;
-  color: #222;
+  font-size: 4.4rem;
+  color: #1da1f2;
+  font-weight: 600;
 }
+
 /**********************************************************/
 
 .section-main {
@@ -172,8 +209,8 @@ body {
 .btn:link,
 .btn:visited {
   display: inline-block;
-  padding: 1.4rem 3.2rem;
-  font-size: 2rem;
+  /* padding: 1rem 2rem; */
+  font-size: 1.8rem;
   font-weight: 500;
   text-decoration: none;
   transition: all 0.3s;
@@ -293,7 +330,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  font-size: 2.4rem;
+  font-size: 2rem;
 }
 .tertiary-heading {
   text-transform: uppercase;
@@ -307,7 +344,7 @@ body {
   display: flex;
   background: rgb(231, 231, 231);
   background: linear-gradient(
-    360deg,
+    180deg,
     rgba(231, 231, 231, 1) 1%,
     rgba(255, 255, 255, 1) 100%,
     rgba(147, 147, 163, 1) 100%
@@ -452,7 +489,6 @@ body {
 .arrow {
   position: absolute;
   font-size: 3.6rem;
-  /* box-shadow: inset 0 0 0 1px #222; */
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   padding: 1.2rem;
   border-radius: 70%;
@@ -495,7 +531,7 @@ body {
 .btn:link,
 .btn:visited {
   display: inline-block;
-  padding: 1.6rem 3.2rem;
+  padding: 1rem 2.2rem;
   font-size: 2rem;
   font-weight: 500;
   text-decoration: none;
@@ -571,8 +607,8 @@ body {
   display: flex;
   position: absolute;
   z-index: 1000;
-  bottom: 1.8rem;
-  right: 9.6rem;
+  top: 1.8rem;
+  right: 20.6rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -582,7 +618,7 @@ body {
   position: absolute;
   overflow: hidden;
   right: 9.6rem;
-  bottom: 4.4rem;
+  top: 6.4rem;
   width: 200px;
   height: 250px;
   z-index: 100000;
@@ -642,7 +678,7 @@ label {
 /*************************** Social icons ***************************/
 
 .social-section {
-  display: none;
+  /* display: none; */
   position: fixed;
   top: 50%;
   transform: translate(0%, -50%);
@@ -661,18 +697,18 @@ label {
   margin-bottom: 1rem;
 }
 .social-class {
-  align-items: center;
-  justify-content: center;
+  /* align-items: center;
+  justify-content: center; */
   width: 6.4rem;
-  flex-direction: column;
+  flex-direction: row;
   gap: 2.4rem;
   text-decoration: none;
   list-style: none;
   font-size: 3.6rem;
   padding: 1rem;
-  border: 1.8px solid #17191b;
+  /* border: 1.8px solid #17191b; */
   border-radius: 1.2rem;
-  background-color: #fff;
+  /* background-color: #fff; */
 }
 
 .git,
@@ -681,7 +717,7 @@ label {
   cursor: pointer;
 }
 
-.git {
+.git--1 {
   color: #333;
 }
 
@@ -701,8 +737,6 @@ label {
   height: 100%;
   background: rgb(32, 31, 31);
   position: relative;
-  /*color: #444444;*/
-  border-radius: 0 0 1.5rem 1.5rem;
 }
 .footer .container {
   display: grid;
@@ -752,15 +786,19 @@ label {
   font-size: 1.4rem;
 }
 
-input {
+.email {
   position: relative;
+}
+input {
   font-size: 1.4rem;
   padding: 0.6rem;
 }
 
-.fas fa-chevron-right {
+.email-icon {
   position: absolute;
-  color: #1da1f2;
+  right: 56px;
+  top: 10px;
+  color: #1198ec;
 }
 
 .links {
@@ -784,8 +822,11 @@ input {
   flex-direction: row;
   width: 65rem;
   margin: 0 auto;
+  padding: 2.4rem;
   justify-content: center;
   align-items: center;
+  line-height: 1.05;
+  color: #f8f8f8;
 }
 
 .author- {
@@ -802,7 +843,6 @@ input {
 }
 
 #insta {
-  /*display: none;*/
   text-align: center;
   color: #b81a86;
   font-size: 2.4rem;
