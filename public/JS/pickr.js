@@ -1,13 +1,13 @@
 'use strict';
 
-let btn1 = 0;
+let btnPickr = 0;
 let btn2 = 0;
 
 function button1(e) {
-  btn1 = 1;
+  btnPickr = 1;
 }
 function button2(e) {
-  btn1 = 0;
+  btnPickr = 0;
 }
 /////////////////////
 ///PICKER SECTION ///
@@ -100,7 +100,7 @@ function changeColor(e) {
     l2 = 1;
   // Contrast = (L1 + 0.05) / (L2 + 0.05)
   // L = 0.2126 ́ R+0.7152 ́G+0.0722 ́B.
-  if (btn1 === 1) {
+  if (btnPickr === 1) {
     document.querySelector('.checker-left').style.backgroundColor = rgbaColor;
     temp[0] = imageData[0] * 1;
     temp[1] = imageData[1] * 1;
