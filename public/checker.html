@@ -67,8 +67,27 @@
         );
         padding: 6.4rem 3.2rem 3.6rem 3.2rem;
         background-color: #f3f3f3;
+        position: relative;
       }
 
+      .left-link {
+        position: absolute;
+        font-size: 3.4rem;
+        left: 3.4rem;
+        top: 2rem;
+        padding-bottom: 6px;
+        border-bottom: 4px solid #4c4c4d;
+      }
+      .left-link:hover {
+        cursor: pointer;
+        color: #e41d1d;
+        font-weight: 500;
+      }
+      .icon-left {
+        /* position: absolute; */
+        font-size: 2.4rem;
+        text-align: center;
+      }
       .tertiary-heading {
         display: flex;
         width: 60rem;
@@ -197,6 +216,10 @@
   </head>
   <body>
     <section class="checker" id="checker">
+      <a class="left-link" onclick="history.back(-1)"
+        ><i class="fas fa-arrow-left icon-left" style="color: #1d1e1f"></i
+        >&nbsp;Back</a
+      >
       <div class="padding1">
         <h3 class="tertiary-heading">Contrast checker</h3>
         <div class="checker-section grid2">
