@@ -1,3 +1,4 @@
+const path = require('path');
 const express = require('express');
 const router = express.Router();
 const colorPallete = require('./../DataModel/colorModel');
@@ -9,9 +10,7 @@ getIndexPage = async (req, res) => {
 };
 
 getCheckerPage = async (req, res) => {
-  res.status(200).render('Checker', {
-    title: 'Color Checker',
-  });
+  res.status(200).sendFile(path.join(__dirname, '../public', 'checker.html'));
 };
 
 getEnhancedPage = async (req, res) => {

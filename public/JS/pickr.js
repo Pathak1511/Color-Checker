@@ -133,6 +133,7 @@ const openModal = function () {
 };
 const closeModal = function () {
   modal.classList.add('hidden');
+  openbtn.classList.add('hidden1');
 };
 
 for (let i = 0; i < btnsshowModal.length; i++) {
