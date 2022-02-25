@@ -75,6 +75,9 @@
   html {
     font-size: 48%;
   }
+  .header {
+    padding: auto 2rem;
+  }
   .secondary-heading {
     font-size: 3.4rem;
   }
