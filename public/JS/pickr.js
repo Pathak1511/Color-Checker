@@ -2,6 +2,10 @@
 
 let btnPickr = 0;
 let btn2 = 0;
+let l1 = 0.2126 * 244 + 0.7152 * 193 + 0.0722 * 148,
+  l2 = 0.2126 * 34 + 0.7152 * 34 + 0.0722 * 34;
+
+checker(l1, l2);
 
 function button1(e) {
   btnPickr = 1;
@@ -87,6 +91,37 @@ function mouseup(e) {
   drag = false;
 }
 
+// Minimum contrast for Small text at least 4.5:1
+//       Larger text at least 3:1
+// Maximum contrast for Small text : at least 7:1
+//     Larger text : at least 4.5:1
+
+function checker(l1, l2) {
+  let c;
+  c = (l1 * 1 + 0.5) / (l2 * 1 + 0.5);
+  // console.log(c);
+  if (c >= 4.5 && c <= 7) {
+    document.querySelector('.aaN').textContent = 'Pass ✔️✔️';
+  } else {
+    document.querySelector('.aaN').textContent = 'Fail ❌❌';
+  }
+  if (c >= 3) {
+    document.querySelector('.aaE').textContent = 'Pass ✔️✔️';
+  } else {
+    document.querySelector('.aaE').textContent = 'Fail ❌❌';
+  }
+  if (c >= 7) {
+    document.querySelector('.aaaN').textContent = 'Pass ✔️✔️';
+  } else {
+    document.querySelector('.aaaN').textContent = 'Fail ❌❌';
+  }
+  if (c >= 4.5) {
+    document.querySelector('.aaaE').textContent = 'Pass ✔️✔️';
+  } else {
+    document.querySelector('.aaaE').textContent = 'Fail ❌❌';
+  }
+}
+
 function changeColor(e) {
   x = e.offsetX;
   y = e.offsetY;
@@ -94,27 +129,30 @@ function changeColor(e) {
   var rgbaColor =
     'rgba(' + imageData[0] + ',' + imageData[1] + ',' + imageData[2] + ',1)';
 
-  let temp = [];
-  let temp2 = [];
-  let l1 = 1,
-    l2 = 1;
+  // let temp = [];
+  // let temp2 = [];
   // Contrast = (L1 + 0.05) / (L2 + 0.05)
   // L = 0.2126 ́ R+0.7152 ́G+0.0722 ́B.
   if (btnPickr === 1) {
     document.querySelector('.checker-left').style.backgroundColor = rgbaColor;
-    temp[0] = imageData[0] * 1;
-    temp[1] = imageData[1] * 1;
-    temp[2] = imageData[2] * 1;
-    l1 = 0.2126 * temp[0] + 0.7152 * temp[1] + 0.0722 * temp[2];
+    // temp[0] = imageData[0] * 1;
+    // temp[1] = imageData[0] * 1;
+    // temp[2] = imageData[2] * 1;
+    l1 = 0.2126 * imageData[0] + 0.7152 * imageData[1] + 0.0722 * imageData[2];
+    console.log(imageData[0] + ' ' + imageData[1] + ' ' + imageData[2]);
+    // checker(l1, l2);
   } else {
     document.querySelector('.left-heading').style.color = rgbaColor;
     document.querySelector('.left-para').style.color = rgbaColor;
     document.querySelector('.left-author').style.color = rgbaColor;
-    temp2[0] = imageData[0] * 1;
-    temp2[1] = imageData[1] * 1;
-    temp2[2] = imageData[2] * 1;
-    l2 = 0.2126 * temp2[0] + 0.7152 * temp2[1] + 0.0722 * temp2[2];
+    // temp2[0] = imageData[0] * 1;
+    // temp2[1] = imageData[1] * 1;
+    // temp2[2] = imageData[2] * 1;
+    l2 = 0.2126 * imageData[0] + 0.7152 * imageData[1] + 0.0722 * imageData[2];
+    console.log(imageData[0] + ' ' + imageData[1] + ' ' + imageData[2]);
+    // checker(l1, l2);
   }
+  checker(l1, l2);
 }
 
 colorStrip.addEventListener('click', click, false);
@@ -133,7 +171,7 @@ const openModal = function () {
 };
 const closeModal = function () {
   modal.classList.add('hidden');
-  openbtn.classList.add('hidden1');
+  // openbtn.classList.add('hidden1');
 };
 
 for (let i = 0; i < btnsshowModal.length; i++) {
@@ -147,7 +185,7 @@ for (let i = 0; i < btnsshowModal.length; i++) {
   });
 }
 
-var slider = document.getElementById('myRange');
-slider.oninput = function () {
-  document.getElementById('slider-input').textContent = this.value;
-};
+// var slider = document.getElementById('myRange');
+// slider.oninput = function () {
+//   document.getElementById('slider-input').textContent = this.value;
+// };

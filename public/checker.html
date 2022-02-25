@@ -146,7 +146,6 @@
       .modal {
         position: absolute;
         width: 28rem;
-        height: 26rem;
         padding: 3rem;
         left: 24rem;
         top: 8rem;
@@ -211,7 +210,7 @@
         color: #222;
       }
     </style>
-
+    <link href="./CSS/mediaquery.css" rel="stylesheet" />
     <title>ColorOsm | CHECKER</title>
   </head>
   <body>
@@ -236,14 +235,14 @@
                     <button class="close-modal">&times;</button>
                     <canvas id="color-block" height="150" width="150"></canvas>
                     <canvas id="color-strip" height="150" width="30"></canvas>
-                    <input
+                    <!-- <input
                       type="range"
                       min="1"
                       max="100"
                       value="50"
                       id="myRange"
                     />
-                    <span id="slider-input">50</span>
+                    <span id="slider-input">50</span> -->
                   </div>
                 </div>
               </div>
@@ -259,20 +258,20 @@
                     <button class="close-modal">&times;</button>
                     <canvas id="color-block" height="150" width="150"></canvas>
                     <canvas id="color-strip" height="150" width="30"></canvas>
-                    <input type="range" min="1" max="100" value="50" />
+                    <!-- <input type="range" min="1" max="100" value="50" /> -->
                   </div>
                 </div>
               </div>
               <div class="contrast-box flex">
                 <div class="flex3">
                   <p>Normal text</p>
-                  <p>AA : <span>Pass 😀</span></p>
-                  <p>AAA : <span>Fail 😐</span></p>
+                  <p>AA : <span class="aaN">Pass ✔️✔️</span></p>
+                  <p>AAA : <span class="aaaN">Fail ❌❌</span></p>
                 </div>
                 <div class="flex3">
                   <p>Larger text</p>
-                  <p>AA : <span>Fail 😐</span></p>
-                  <p>AAA : <span>Pass 😀</span></p>
+                  <p>AA : <span class="aaE">Fail ❌❌</span></p>
+                  <p>AAA : <span class="aaaE">Pass ✔️✔️</span></p>
                 </div>
               </div>
             </div>

@@ -14,7 +14,7 @@
       crossorigin="anonymous"
     />
     <!-------------------------------------------------------------------------------------->
-
+    <link href="./CSS/bootstrap.css" rel="stylesheet" />
     <link href="./CSS/style.css" rel="stylesheet" />
     <link href="./CSS/grid.css" rel="stylesheet" />
     <link href="./CSS/mediaquery.css" rel="stylesheet" />
@@ -38,36 +38,33 @@
       </h1>
       <nav class="navigation">
         <ul class="nav-main">
-          <li><a class="nav-list" href="./index.html">Home</a></li>
+          <li><a class="nav-list" href="/Home">Home</a></li>
           <li>
-            <a class="nav-list" href="./checker.html">Contrast Checker</a>
+            <a class="nav-list" href="checker.html">Contrast Checker</a>
           </li>
           <li>
-            <a class="nav-list" href="./EnhancedChecker.html">Enhanced</a>
+            <a class="nav-list" href="/Enhanced">Enhanced</a>
           </li>
           <li>
-            <a
-              class="nav-list last"
-              class="btn btn-primary"
-              type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasRight"
-              aria-controls="offcanvasRight"
-              href="#"
-              >Learn More</a
-            >
+            <a class="nav-list" href="/Pallete">Pallete</a>
+          </li>
+          <li>
+            <a class="nav-list last" href="#">Learn More</a>
           </li>
         </ul>
       </nav>
-      <a
-        class="toggle-menu"
-        data-bs-toggle="offcanvas"
-        href="#offcanvasExample"
-        role="button"
-        aria-controls="offcanvasExample"
-      >
-        <i class="fas fa-sliders-h toggle-icon"></i
-      ></a>
+      <i
+        class="fas fa-bars icon-mobile-nav"
+        name="open-container"
+        type="button"
+        onclick="openNav()"
+      ></i>
+      <i
+        class="fas fa-times icon-mobile-nav"
+        name="close-container"
+        type="button"
+        onclick="closeNav()"
+      ></i>
     </header>
 
     <!------------------X----------------------X-----------------------X----------------->
@@ -84,19 +81,12 @@
             <p class="primary-para">Followed by the guidelines of WCAG</p>
             <div class="flex">
               <a href="pallete.html" class="btn btn-">Explore</a>
-              <a
-                href="qpp"
-                class="btn btn- btnlast"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasBottom"
-                aria-controls="offcanvasBottom"
-                >About us</a
-              >
+              <a href="#" class="btn btn- btnlast">About us</a>
             </div>
           </div>
           <div class="hero-left">
             <div class="colors-container">
-              <div class="color">
+              <div class="color firstColor">
                 <div class="color--"><span>#000000</span></div>
               </div>
               <div class="color">
@@ -111,7 +101,7 @@
               <div class="color">
                 <div class="color--"><span>#000000</span></div>
               </div>
-              <div class="color">
+              <div class="color lastColor">
                 <div class="color--"><span>#000000</span></div>
               </div>
               <div class="copied">copied to clipboard!!</div>
@@ -121,146 +111,7 @@
       </div>
     </section>
 
-    <!----------------------- OFFCANVAS ----------------------------------------->
-    <div
-      class="offcanvas offcanvas-end offcanvas2"
-      tabindex="-1"
-      id="offcanvasRight"
-      aria-labelledby="offcanvasRightLabel"
-    >
-      <div class="offcanvas-header">
-        <h5
-          id="offcanvasRightLabel"
-          style="font-size: 2.8rem; padding-left: 17.8rem"
-        >
-          How It Works??
-        </h5>
-        <button
-          type="button"
-          class="btn-close text-reset"
-          data-bs-dismiss="offcanvas"
-          aria-label="Close"
-          style="font-size: 1.8rem"
-        ></button>
-      </div>
-      <div class="offcanvas-body"></div>
-    </div>
-
-    <!---------------------- OFFCANVAS  ---------------------------------------->
-
-    <div
-      class="offcanvas offcanvas-bottom offcanvas1"
-      tabindex="-1"
-      id="offcanvasBottom"
-      aria-labelledby="offcanvasBottomLabel"
-    >
-      <div class="offcanvas-header">
-        <h5
-          class="offcanvas-title"
-          id="offcanvasBottomLabel"
-          style="font-size: 2.8rem; padding-left: 164px"
-        >
-          Admin
-        </h5>
-        <button
-          type="button"
-          class="btn-close text-reset"
-          data-bs-dismiss="offcanvas"
-          aria-label="Close"
-          style="font-size: 1.8rem"
-        ></button>
-      </div>
-      <div class="offcanvas-body small" style="font-size: 1.8rem">
-        <div class="offCanvasbody">
-          <img
-            src="./img/hrk3.jpeg"
-            width="20%"
-            height="auto"
-            class="aboutusImg"
-          />
-          <div>
-            <h2>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Accusantium cupiditate aperiam eum, fugit saepe non et magnam nisi
-              corporis vero quam aliquid suscipit harum aspernatur sequi?
-              Quisquam dolores eum Lorem, ipsum dolor sit amet consectetur
-              adipisicing elit. Cumque magnam earum minus officiis ullam
-              consectetur alias, obcaecati ipsa aperiam molestiae excepturi
-              deleniti error ut voluptas vitae nulla, quisquam autem ab! Lorem
-              ipsum dolor sit amet consectetur adipisicing elit. Numquam eius
-              provident hic mollitia recusandae perferendis labore enim dicta,
-              facilis ipsum itaque facere ipsam, est eos dolore assumenda!
-              Sapiente, magnam fugit. Lorem ipsum dolor sit, amet consectetur
-              adipisicing elit. Consequatur rerum dolor accusantium vel
-              consectetur eius magni quam nemo architecto dignissimos,
-              blanditiis ipsa eaque modi natus eum tenetur inventore eligendi
-              iste.
-            </h2>
-            <div class="follows">
-              <ul class="social-class">
-                <li class="social-list">
-                  <a href="#"><i class="fab fa-github git--1"></i></a>
-                </li>
-                <li class="social-list fb">
-                  <a href="#"><span class="fab fa-facebook fb"></span></a>
-                </li>
-                <li class="social-list twt">
-                  <a href="#"><span class="fab fa-twitter twt"></span></a>
-                </li>
-              </ul>
-            </div>
-            <p></p>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!---------------------------- OFFCANVAS FOR NAVIGATION ------------------------->
-    <div
-      class="offcanvas offcanvas-start offcanvasNav"
-      tabindex="-1"
-      id="offcanvasExample"
-      aria-labelledby="offcanvasExampleLabel"
-    >
-      <div class="offcanvas-header" style="display: flex; align-items: center">
-        <h5
-          class="offcanvas-title"
-          id="offcanvasExampleLabel"
-          style="
-            font-size: 6.4rem;
-            padding: 4.4rem 4.8rem;
-            margin-bottom: 4.4rem;
-            position: relative;
-          "
-        >
-          Navigation
-        </h5>
-        <button
-          type="button"
-          class="btn-close text-reset"
-          data-bs-dismiss="offcanvas"
-          aria-label="Close"
-          style="
-            font-size: 4.4rem;
-            color: #333;
-            position: absolute;
-            right: 6.4rem;
-            top: 8rem;
-          "
-        ></button>
-      </div>
-      <div class="offcanvas-body">
-        <ul class="list-group canvasList-">
-          <li><a href="#">HOME</a></li>
-          <li><a href="#">CONTRAST CHECKER</a></li>
-          <li><a href="#">ENCHANCED</a></li>
-          <li><a href="#">PALLETE</a></li>
-          <li><a href="#">EXPLORE</a></li>
-          <li><a href="#">ABOUT US</a></li>
-          <li><a href="#">LEARN MORE</a></li>
-        </ul>
-      </div>
-    </div>
     <!----------------------X-----------------------X------------------------X----------->
     <!-- <span class="fas fa-copy"></span> -->
 
@@ -321,14 +172,24 @@
             class="author-"
             ><a href="#" class="author--">Pathak_1511</a></span
           >
-          <a href="#" class="insta"
+          <!-- <a href="#" class="insta"
             ><i class="fab fa-instagram" id="insta"></i
-          ></a>
+          ></a> -->
         </h4>
       </div>
     </footer>
 
     <!---------------------------- JAVASCRIPT FILES ------------------------------------->
+    <script type="text/javascript">
+      let btnNav = document.querySelector('.icon-mobile-nav');
+      let header = document.querySelector('.header');
+      function openNav() {
+        header.classList.toggle('nav-open');
+      }
+      function closeNav() {
+        header.classList.remove('nav-open');
+      }
+    </script>
 
     <script src="./JS/jqueryv3.6.0.min.js"></script>
     <script src="./JS/pickr.js"></script>

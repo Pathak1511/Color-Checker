@@ -3,6 +3,11 @@
 let openbtn = document.querySelector('.container-1');
 const btn3 = document.querySelector('.show-modal1');
 
+const closeModal = function () {
+  // modal.classList.add('hidden1');
+  openbtn.classList.add('hidden1');
+};
+
 function openbtn1() {
   openbtn.classList.remove('hidden1');
   document.addEventListener('keydown', function (e) {

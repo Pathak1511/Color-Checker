@@ -21,7 +21,6 @@ getEnhancedPage = async (req, res) => {
 
 getPalletePage = async (req, res) => {
   req.query.types = 'color';
-
   try {
     const colors = await colorPallete.find(req.query);
     res.status(200).render('Pallete', {
@@ -46,7 +45,7 @@ getMoreColor = async (req, res) => {
   }
 };
 
-router.get('/index', getIndexPage);
+router.get('/Home', getIndexPage);
 router.get('/Checker', getCheckerPage);
 router.get('/Enhanced', getEnhancedPage);
 router.get('/Pallete', getPalletePage);
