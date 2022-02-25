@@ -223,9 +223,17 @@
 }
 
 /* 416 px */
-@media (max-width: 24em) and (min-width: 16rem) {
+@media (max-width: 24em) and (min-width: 16em) {
   body {
     padding: 0.8rem;
+  }
+  .pallete-Container-,
+  .pallete {
+    padding: 0rem;
+  }
+  .container-main {
+    row-gap: 2rem;
+    column-gap: 0.8rem;
   }
   .header {
     padding: 0rem 2rem;
