@@ -224,6 +224,12 @@
 
 /* 416 px */
 @media (max-width: 24em) and (min-width: 16em) {
+  .pallete-Container {
+    padding: 0rem;
+    background-color: #209f9f;
+    height: auto;
+    border-radius: 0rem;
+  }
   .pallete-Container-,
   .pallete {
     padding: 0rem;
