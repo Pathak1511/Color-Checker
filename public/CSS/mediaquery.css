@@ -223,17 +223,35 @@
 }
 
 /* 416 px */
-@media (max-width: 26em) {
+@media (max-width: 24em) and (min-width: 16rem) {
+  .header {
+    padding: 0rem 2rem;
+  }
   .flex {
-    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
   }
   .hero-right {
     margin: 0rem 0rem;
+    align-items: center;
+  }
+  .copied {
+    position: fixed;
+    bottom: 2rem;
   }
   .grid {
     gap: 6.4rem;
   }
   .footer {
-    font-size: 54%;
+    font-size: 58%;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  input,
+  .follow-para,
+  .footer-content a,
+  p.newsletter-para {
+    font-size: 1.8rem;
   }
 }
