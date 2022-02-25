@@ -5,7 +5,7 @@ const colorPallete = require('./../DataModel/colorModel');
 
 getIndexPage = async (req, res) => {
   res.status(200).render('Overview', {
-    title: ' ',
+    title: 'Home',
   });
 };
 
@@ -46,6 +46,7 @@ getMoreColor = async (req, res) => {
 };
 
 router.get('/', getIndexPage);
+
 router.get('/Checker', getCheckerPage);
 router.get('/Enhanced', getEnhancedPage);
 router.get('/Pallete', getPalletePage);

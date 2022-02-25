@@ -19,7 +19,6 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(`${__dirname}/public`));
 
 app.use('/', viewRouter);
-
 app.all('*', (req, res) => {
   res.status(404).render('Error', {
     title: 'Error | 404',
