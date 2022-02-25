@@ -224,6 +224,48 @@
 
 /* 416 px */
 @media (max-width: 24em) and (min-width: 16em) {
+  .checker {
+    padding: 6.4rem 0rem;
+  }
+  .checker-right,
+  .checker-left {
+    margin: 4.4rem 0rem;
+    display: flex;
+    width: 68%;
+    padding: 2rem;
+  }
+  .left-heading {
+    font-size: 2.8rem;
+  }
+  .flex4 {
+    font-size: 2rem;
+  }
+  .modal {
+    left: 1rem;
+    padding: 1rem;
+  }
+  .close-modal {
+    display: flex;
+    color: #222;
+    top: -6rem;
+    left: 26rem;
+    padding: 2.4rem;
+  }
+  .show-modal {
+    padding: 0.6rem 1rem;
+  }
+
+  .left-para,
+  .para-text1,
+  .para-text2,
+  .flex3 {
+    font-size: 1.8rem;
+  }
+  .left-link,
+  .tertiary-heading {
+    font-size: 2.8rem;
+    /* width: auto; */
+  }
   .pallete-Container {
     padding: 0rem;
     background-color: #209f9f;
@@ -258,6 +300,9 @@
   }
   .grid {
     gap: 6.4rem;
+  }
+  .grid2 {
+    padding: 0rem;
   }
   .footer {
     font-size: 58%;
