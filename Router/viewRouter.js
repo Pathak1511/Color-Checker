@@ -45,7 +45,7 @@ getMoreColor = async (req, res) => {
   }
 };
 
-router.get('/Home', getIndexPage);
+router.get('/', getIndexPage);
 router.get('/Checker', getCheckerPage);
 router.get('/Enhanced', getEnhancedPage);
 router.get('/Pallete', getPalletePage);
