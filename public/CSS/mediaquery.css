@@ -224,6 +224,9 @@
 
 /* 416 px */
 @media (max-width: 24em) and (min-width: 16rem) {
+  body {
+    padding: 0.8rem;
+  }
   .header {
     padding: 0rem 2rem;
   }
