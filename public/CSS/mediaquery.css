@@ -80,7 +80,7 @@
   }
   .grid {
     grid-template-columns: 1fr;
-    padding: 6.4rem 3.2rem;
+    padding: 6.4rem 0rem;
   }
   .hero-right {
     margin: 0rem 8rem;
