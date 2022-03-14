@@ -1,21 +1,11 @@
 'use strict';
 
 let openbtn = document.querySelector('.container-1');
-const btn3 = document.querySelector('.show-modal1');
+const btn3 = document.getElementById('btn3');
 
-const closeModal = function () {
-  // modal.classList.add('hidden1');
-  openbtn.classList.add('hidden1');
-};
-
-function openbtn1() {
-  openbtn.classList.remove('hidden1');
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && !openbtn.classList.contains('hidden1')) {
-      closeModal();
-    }
-  });
-}
+btn3.addEventListener('click', function () {
+  openbtn.classList.toggle('hidden1');
+});
 
 let outputBox = document.querySelector('.output');
 let getBody = document.querySelector('.section-hero');
@@ -36,5 +26,4 @@ function copy() {
   element.select();
   document.execCommand('copy');
   document.body.removeChild(element);
-  // alert('copied');
 }

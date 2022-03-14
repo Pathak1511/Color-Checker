@@ -139,7 +139,7 @@ function changeColor(e) {
     // temp[1] = imageData[0] * 1;
     // temp[2] = imageData[2] * 1;
     l1 = 0.2126 * imageData[0] + 0.7152 * imageData[1] + 0.0722 * imageData[2];
-    console.log(imageData[0] + ' ' + imageData[1] + ' ' + imageData[2]);
+    //console.log(imageData[0] + ' ' + imageData[1] + ' ' + imageData[2]);
     // checker(l1, l2);
   } else {
     document.querySelector('.left-heading').style.color = rgbaColor;
@@ -149,7 +149,7 @@ function changeColor(e) {
     // temp2[1] = imageData[1] * 1;
     // temp2[2] = imageData[2] * 1;
     l2 = 0.2126 * imageData[0] + 0.7152 * imageData[1] + 0.0722 * imageData[2];
-    console.log(imageData[0] + ' ' + imageData[1] + ' ' + imageData[2]);
+    //console.log(imageData[0] + ' ' + imageData[1] + ' ' + imageData[2]);
     // checker(l1, l2);
   }
   checker(l1, l2);
