@@ -9,7 +9,16 @@
 
     main-color : #219DD2;
                  #4db1db;
-                 #e9f5fb;             
+                 #e9f5fb;   
+                 
+                 
+  --body-color: #e4e9f7;
+  --body-color-02: #555;
+  --sidebar-color: #f2f2f2;
+  --primary-color: #5c87fe;
+  --secondary-color: #f6f5ff;
+  --toggle-color: #ddd;
+  --text-color: #222;
   */
 
 * {
@@ -63,7 +72,7 @@ body {
   height: 68px;
   padding: 0rem 6.4rem;
   z-index: 5;
-  background-color: #222;
+  background-color: #333;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   position: relative;
 }
@@ -73,7 +82,7 @@ body {
 .icon-mobile-nav {
   display: none;
   font-size: 3.6rem;
-  color: #f8f8f8;
+  color: #ddd;
 }
 .icon-mobile-nav[name='close-container'] {
   display: none;
@@ -105,12 +114,12 @@ body {
   font-size: 2rem;
   line-height: 1.05;
   font-weight: 500;
-  color: #f7f7f7;
+  color: #ddd;
 }
 
 .nav-list:hover,
 .nav-list:active {
-  color: #1da1f2;
+  color: #5c87fe;
 }
 
 .nav-list.last:link,
@@ -125,13 +134,13 @@ body {
 
 .nav-list.last:hover,
 .nav-list.last:active {
-  background-color: #1da1f2;
+  background-color: #5c87fe;
 }
 
 .nav-list.first:link,
 .nav-list.first:visited {
   font-size: 4.4rem;
-  color: #1da1f2;
+  color: #5c87fe;
   font-weight: 600;
 }
 
@@ -139,12 +148,12 @@ body {
 .offcanvasNav,
 .section-main {
   background: rgb(231, 231, 231);
-  background: linear-gradient(
+  /* background: linear-gradient(
     180deg,
     rgba(231, 231, 231, 1) 1%,
     rgba(255, 255, 255, 1) 100%,
-    rgba(147, 147, 163, 1) 100%
-  );
+    rgba(147, 147, 163, 1) 100% */
+  background-color: #e4e9f7;
 }
 
 /*******************Hero right****************************/
@@ -202,7 +211,7 @@ body {
 
 .btn-:hover,
 .btn-:active {
-  background-color: #1da1f2;
+  background-color: #5c87fe;
 }
 
 .btn:last-child {
@@ -221,7 +230,7 @@ body {
 .hero-left {
   padding: 1.2rem;
   border-radius: 2.4rem;
-  background-color: #1f1f1f;
+  background-color: #333;
   box-shadow: rgb(255, 254, 254) 0px 54px 55px,
     rgb(255, 255, 255) 0px -12px 30px, rgb(255, 255, 255) 0px 4px 6px,
     rgb(255, 254, 254) 0px 12px 13px, rgb(255, 252, 252) 0px -3px 5px;
@@ -326,7 +335,7 @@ body {
     rgba(147, 147, 163, 1) 100%
   );
   padding: 6.4rem 3.2rem 3.6rem 3.2rem;
-  background-color: #f3f3f3;
+  background-color: #e4e9f7;
 }
 
 .tertiary-heading {
